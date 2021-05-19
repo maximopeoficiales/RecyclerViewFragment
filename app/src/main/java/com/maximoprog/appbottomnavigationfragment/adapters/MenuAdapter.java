@@ -2,6 +2,7 @@ package com.maximoprog.appbottomnavigationfragment.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.maximoprog.appbottomnavigationfragment.MenuDetailActivity;
 import com.maximoprog.appbottomnavigationfragment.R;
 import com.maximoprog.appbottomnavigationfragment.models.Menu;
 
@@ -52,13 +54,13 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
             public void onClick(View v) {
                 Toasty.success(context, item.getTitle(), Toast.LENGTH_SHORT, true).show();
 //                crea un intent
-//                Intent intentAndroidDetalle = new Intent(
-//                        context, DetalleAndroidActivity.class
-//                );
+                Intent intentMenuDetalle = new Intent(
+                        context, MenuDetailActivity.class
+                );
 //                le pasa el item osea el objecto como parametro
-//                intentAndroidDetalle.putExtra("android", item);
+                intentMenuDetalle.putExtra("menu", item);
 //                inicia la actividad
-//                context.startActivity(intentAndroidDetalle);
+                context.startActivity(intentMenuDetalle);
             }
         });
     }

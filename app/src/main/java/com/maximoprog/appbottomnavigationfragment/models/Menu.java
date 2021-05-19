@@ -1,6 +1,9 @@
 package com.maximoprog.appbottomnavigationfragment.models;
 
-public class Menu {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Menu  implements Parcelable {
     private int id;
     private String title;
     private String price;
@@ -14,6 +17,26 @@ public class Menu {
         this.description = description;
         this.image = image;
     }
+
+    protected Menu(Parcel in) {
+        id = in.readInt();
+        title = in.readString();
+        price = in.readString();
+        description = in.readString();
+        image = in.readInt();
+    }
+
+    public static final Creator<Menu> CREATOR = new Creator<Menu>() {
+        @Override
+        public Menu createFromParcel(Parcel in) {
+            return new Menu(in);
+        }
+
+        @Override
+        public Menu[] newArray(int size) {
+            return new Menu[size];
+        }
+    };
 
     public int getId() {
         return id;
@@ -53,5 +76,19 @@ public class Menu {
 
     public void setImage(int image) {
         this.image = image;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
+        dest.writeString(title);
+        dest.writeString(price);
+        dest.writeString(description);
+        dest.writeInt(image);
     }
 }
