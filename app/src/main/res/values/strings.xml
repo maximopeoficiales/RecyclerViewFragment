@@ -3,7 +3,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="titleForm1">Calculo de Ingredientes</string>
+    <string name="titleForm1">Calculo de Precio</string>
     <string name="inputMenu">Menu</string>
     <string name="inputPersonas">Personas</string>
     <string name="placeHolderMenu">Ingrese el nombre del Plato</string>
@@ -11,4 +11,9 @@
     <string name="txtCalcular">Calcular</string>
     <string name="txtListaMenus">Lista de Menus</string>
     <string name="txtDetalleMenuItem">Ver</string>
+    <string name="txtCalculadora">Calculadora</string>
+    <string name="txtMenus">Menus</string>
+    <string name="txtPrecioPlato">Ingrese el Precio del Menu</string>
+    <string name="txtCantidadMenu">Ingrese la cantidad</string>
+    <string name="txtTiTleRegistro">Registro</string>
 </resources>

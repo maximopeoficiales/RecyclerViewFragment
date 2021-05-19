@@ -22,36 +22,38 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/inputMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/inputNMenus"
+        android:layout_width="287dp"
+        android:layout_height="51dp"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="@string/placeHolderMenu"
-        android:inputType="textPersonName"
-        android:text="@string/inputMenu"
+        android:hint="@string/txtCantidadMenu"
+        android:inputType="number|numberDecimal"
+        android:numeric="decimal"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPrecioMenu" />
+
+    <EditText
+        android:id="@+id/inputPrecioMenu"
+        android:layout_width="287dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/txtPrecioPlato"
+        android:inputType="number|numberDecimal"
+        android:numeric="decimal"
+        android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <EditText
-        android:id="@+id/inputNPersonas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="@string/placeholderPersonas"
-        android:inputType="number"
-        android:text="@string/inputPersonas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputMenu" />
-
     <Button
         android:id="@+id/btnCalcularReceta"
-        android:layout_width="218dp"
-        android:layout_height="50dp"
+        android:layout_width="264dp"
+        android:layout_height="63dp"
         android:layout_marginTop="56dp"
         android:gravity="center"
         android:padding="5dp"
@@ -61,7 +63,7 @@
         app:iconGravity="textStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputNPersonas" />
+        app:layout_constraintTop_toBottomOf="@+id/inputNMenus" />
 
     <TextView
         android:id="@+id/txtResultReceta"

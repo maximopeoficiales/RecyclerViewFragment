@@ -23,7 +23,7 @@ public class DashboardFragment extends Fragment {
     ArrayList<Menu> listMenu;
     RecyclerView recyclerViewMenus;
     private DashboardViewModel dashboardViewModel;
-
+    
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         dashboardViewModel =
