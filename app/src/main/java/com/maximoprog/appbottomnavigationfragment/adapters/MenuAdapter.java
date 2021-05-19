@@ -20,29 +20,29 @@ import java.util.ArrayList;
 
 import es.dmoral.toasty.Toasty;
 
-public class MenuAdapters extends RecyclerView.Adapter<MenuAdapters.ViewHolder> {
+public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
 //propiades necesarias
 
     private Context context;
     private ArrayList<Menu> listMenu;
 
-    public MenuAdapters(Context context) {
+    public MenuAdapter(Context context) {
         this.context = context;
         listMenu = new ArrayList<>();
     }
 
     @NonNull
     @Override
-    public MenuAdapters.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MenuAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 //        se le indica que vista usara el adapter
         View vista = LayoutInflater.from(context)
                 .inflate(R.layout.list_menu_element, parent, false);
-        return new MenuAdapters.ViewHolder(vista);
+        return new MenuAdapter.ViewHolder(vista);
     }
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull MenuAdapters.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MenuAdapter.ViewHolder holder, int position) {
         final Menu item = listMenu.get(position);
         holder.txtMenuTitle.setText(item.getTitle());
         holder.txtMenuPrice.setText("Precio: S./: " + item.getPrice());
